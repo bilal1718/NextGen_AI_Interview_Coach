@@ -1,6 +1,6 @@
 import React from 'react'
 import { Carousel } from 'flowbite-react'
-import banner1 from "../images/test1.jpeg"
+import banner1 from "../images/1.webp"
 
 const Home = () => {
   return (
