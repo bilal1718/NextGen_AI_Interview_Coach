@@ -1,62 +1,61 @@
-import React from 'react';
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
 const features = [
   {
-    title: "Smart Matching",
-    description: "Our system matches you with the best job opportunities based on your skills and experience.",
-    icon: "🔍"
+    name: 'Push to deploy',
+    description:
+      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+    icon: CloudArrowUpIcon,
   },
   {
-    title: "Interview Scheduling",
-    description: "Easily schedule interviews with potential employers directly through our platform.",
-    icon: "🗓️"
+    name: 'SSL certificates',
+    description:
+      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+    icon: LockClosedIcon,
   },
   {
-    title: "Feedback Collection",
-    description: "Receive constructive feedback from your interviews to help you improve and succeed.",
-    icon: "💬"
+    name: 'Simple queues',
+    description:
+      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+    icon: ArrowPathIcon,
   },
   {
-    title: "Profile Boosting",
-    description: "Boost your profile visibility to top employers and get noticed faster.",
-    icon: "🚀"
+    name: 'Advanced security',
+    description:
+      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+    icon: FingerPrintIcon,
   },
-  {
-    title: "Real-Time Notifications",
-    description: "Stay updated with real-time notifications about your job applications and interview status.",
-    icon: "🔔"
-  },
-];
+]
 
-const Features = () => {
+export default function Features() {
   return (
-    <div className="bg-gray-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">Features</h2>
-          <p className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black sm:text-5xl">
-            Why Choose Us
-          </p>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-            Explore the features that make our platform stand out.
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-10xl px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl lg:text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-blue-700">
+            Explore our Amazing Features
+          </h1>
+          <p className="mt-6 text-lg leading-8 text-gray-700">
+            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
+            pulvinar et feugiat blandit at. In mi viverra elit nunc.
           </p>
         </div>
-        <div className="mt-10">
-          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {features.map((feature, index) => (
-              <li key={index} className="col-span-1 bg-white rounded-lg shadow p-6">
-                <div className="w-12 h-12 rounded-full bg-indigo-600 text-white flex items-center justify-center mb-4">
-                  <span className="text-2xl">{feature.icon}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                <p className="mt-2 text-gray-600">{feature.description}</p>
-              </li>
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-16">
+                <dt className="font-bold leading-7 text-2xl text-blue-700">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                  </div>
+                  {feature.name}
+                </dt>
+                <dd className="mt-2 text-medium text-md leading-7 text-gray-600">{feature.description}</dd>
+              </div>
             ))}
-          </ul>
+          </dl>
         </div>
       </div>
     </div>
-  );
-};
-
-export default Features;
+  )
+}

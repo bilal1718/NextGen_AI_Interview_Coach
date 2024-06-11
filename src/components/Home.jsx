@@ -1,45 +1,30 @@
-import React from 'react'
-import { Carousel } from 'flowbite-react'
-import banner1 from "../images/1.webp"
+import React from 'react';
+import banner1 from "../images/1.webp";
 
 const Home = () => {
   return (
-    <div className='bg-neutralSilver'>
-        <div className='px-4 lg:px-14 max-w-screen-2xl mx-auto min-h-screen h-screen'>
-        <Carousel className='w-full mx-auto'>
-        <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center
-         justify-between gap-12">
-          <div>
-            <img src={banner1} className='w-30' alt='' />
-          </div>
-          {/*Hero Text */}
-          <div className='md:w-1/2'>
-            <h1 className='text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug'>
-                Lessons and Insights <span className='text-brandPrimary leading-snug'>from 8 years</span>
-                </h1>
-                <p className='text-neutralGrey text-base mb-8'>Where to grow your business as a photographer: site or social media?</p>
-                <button className='btn-primary '>Regsiter</button>
-          </div>
-          
-        </div>
-        <div className="my-28 md:my-8 py-12 flex flex-col md:flex-row-reverse items-center
-         justify-between gap-12">
-          <div>
-            <img src={banner1} className='w-30' alt='' />
-          </div>
-          {/*Hero Text */}
-          <div className='md:w-1/2'>
-            <h1 className='text-5xl font-semibold mb-4 text-neutralDGrey md:w-3/4 leading-snug'>
-                Learn and Earn Money <span className='text-brandPrimary leading-snug'>in 4 months</span>
-                </h1>
-                <p className='text-neutralGrey text-base mb-8'>Where to grow your business as a photographer: site or social media?</p>
-                <button className='btn-primary '>Regsiter</button>
+    <section className="dark:bg-blue-800 dark:text-white bg-blue-800 h-screen">
+      <div className="container flex flex-col justify-center p-6 mx-auto
+       sm:py-12 lg:py-24 lg:flex-row lg:justify-between bg-blue-800 mt-40">
+        <div className="flex flex-col text-white 
+        justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <h1 className="text-5xl font-bold leading-none sm:text-6xl">Ac mattis
+            <span className="dark:text-violet-600">senectus</span>erat pharetra
+          </h1>
+          <p className="mt-6 mb-8  text-lg sm:mb-12">Dictum aliquam porta in condimentum ac integer
+            <br  className="hidden md:inline lg:hidden" />turpis pulvinar, est scelerisque ligula sem
+          </p>
+          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold rounded dark:bg-violet-600 dark:text-gray-50">Suspendisse</a>
+            <a rel="noopener noreferrer" href="#" className="px-8 py-3 text-lg font-semibold border rounded dark:border-gray-800">Malesuada</a>
           </div>
         </div>
-      </Carousel>
+        <div className="flex items-center justify-center p-6 lg:mt-0 h-96 sm:h-128 lg:h-160 xl:h-176 2xl:h-192">
+          <img src={banner1} alt="" className="object-contain h-128 sm:h-128 lg:h-160 xl:h-176 2xl:h-192" />
         </div>
-    </div>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default Home
+export default Home;

@@ -12,9 +12,9 @@ function App() {
     <>
      <Navbar />
      <Home />
-     <HowItWorks />
      <Features />
      <CallToAction />
+     <HowItWorks />
      <MyFooter />
     </>
   )

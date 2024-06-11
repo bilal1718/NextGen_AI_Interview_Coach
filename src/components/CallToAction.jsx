@@ -2,32 +2,37 @@ import React from 'react';
 
 const CallToAction = () => {
   return (
-    <div className="bg-indigo-600">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 text-center">
-        <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-          <span className="block">Ready to get started?</span>
-          <span className="block">Join us now and elevate your career.</span>
-        </h2>
-        <div className="mt-8 flex justify-center">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50"
-            >
-              Get Started
-            </a>
+    <div className="relative mx-auto w-full mt-20 mb-20">
+    <div
+      className="rounded-xl p-4 bg-blue-600"
+    >
+      <div className="rounded-lg bg-blue-500 backdrop-blur">
+        <div className="flex w-full flex-wrap
+        items-center justify-between gap-4 px-8 py-10 sm:px-16 lg:flex-nowrap">
+          <div className="lg:max-w-xl">
+            <h2 className="block w-full pb-2 text-white font-bold text-4xl sm:text-4xl">
+              Enhancing Productivity with Artificial Intelligence
+            </h2>
+            <p className="my-4 font-medium leading-relaxed tracking-wide
+             text-white">
+              Natural Language Processing (NLP): The SmartAI Assistant understands
+              and interprets natural language commands, allowing users to
+              communicate with it effortlessly.
+            </p>
           </div>
-          <div className="ml-3 inline-flex">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-700"
-            >
-              Learn More
-            </a>
+          <div>
+            <button className="bg-black
+             text-white button-text flex items-center justify-center
+              whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-lg
+               sm:text-sm">
+              Get Started
+            </button>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  
   );
 };
 
