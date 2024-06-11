@@ -27,7 +27,7 @@ const Navbar = () => {
   
   const navItems = [
     { link: "Features", path: "features" },
-    { link: "How It Works", path: "service" },
+    { link: "How It Works", path: "howitworks" },
     { link: "About", path: "about" },
     { link: "Login", path: "login" },
   ];
@@ -44,7 +44,9 @@ const Navbar = () => {
           <ul className='md:flex space-x-12 hidden mr-6'>
             {
               navItems.map(({ link, path }) => (
-                <Link to={path} spy={true} smooth={true} offset={-100} key={path} className={`block text-2xl font-medium ${isSticky ? "text-black" : "text-white"}`}>
+                <Link to={path} spy={true} smooth={true} offset={-100}
+                 key={path} className={`block text-2xl font-medium cursor-pointer
+                 ${isSticky ? "text-black" : "text-white"}`}>
                   {link === "Login" ? (
                     <span className='flex items-center space-x-1'>
                       <span>{link}</span>

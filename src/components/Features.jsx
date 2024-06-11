@@ -1,61 +1,60 @@
-import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
+import { QuestionMarkCircleIcon, ChatBubbleLeftRightIcon, ChartBarIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 
 const features = [
   {
-    name: 'Push to deploy',
+    name: 'Personalized Interview Questions',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-    icon: CloudArrowUpIcon,
+      'Receive tailored interview questions based on your profile and job role to ensure relevant and effective preparation.',
+    icon: QuestionMarkCircleIcon,
   },
   {
-    name: 'SSL certificates',
+    name: 'Real-time Feedback',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-    icon: LockClosedIcon,
+      'Get instant feedback and improvement suggestions after each practice session to enhance your performance.',
+    icon: ChatBubbleLeftRightIcon,
   },
   {
-    name: 'Simple queues',
+    name: 'Performance Analytics',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-    icon: ArrowPathIcon,
+      'Track your progress with detailed analytics and performance reports to identify strengths and areas for improvement.',
+    icon: ChartBarIcon,
   },
   {
-    name: 'Advanced security',
+    name: 'Interactive AI Avatar',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-    icon: FingerPrintIcon,
+      'Engage with a lifelike AI avatar for a realistic interview experience that boosts your confidence and readiness.',
+    icon: UserCircleIcon,
   },
-]
+];
 
 export default function Features() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div id='features' className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-10xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl lg:text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-blue-700">
-            Explore our Amazing Features
+          <h1 className="text-center text-blue-700 text-6xl font-bold mb-4 mt-10">
+            EXPLORE OUR <span className='text-black text-6xl underline-offset-4'>FEATURES</span>
           </h1>
-          <p className="mt-6 text-lg leading-8 text-gray-700">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
-          </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <dl className="grid grid-cols-1 gap-14 sm:grid-cols-2 lg:grid-cols-2 lg:gap-12">
             {features.map((feature) => (
-              <div key={feature.name} className="relative pl-16">
-                <dt className="font-bold leading-7 text-2xl text-blue-700">
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                    <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
+              <div key={feature.name} 
+              className="relative flex flex-col bg-white rounded-lg shadow-md p-10 mb-12 mr-12">
+                <dt className="flex items-center">
+                  <div className="flex-shrink-0">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-indigo-600">
+                      <feature.icon className="h-8 w-8 text-white" aria-hidden="true" />
+                    </div>
                   </div>
-                  {feature.name}
+                  <p className="ml-4 text-2xl font-bold leading-7 text-blue-700">{feature.name}</p>
                 </dt>
-                <dd className="mt-2 text-medium text-md leading-7 text-gray-600">{feature.description}</dd>
+                <dd className="mt-6 text-lg leading-7 text-gray-600">{feature.description}</dd>
               </div>
             ))}
           </dl>
         </div>
       </div>
     </div>
-  )
+  );
 }

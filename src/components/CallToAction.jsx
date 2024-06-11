@@ -2,37 +2,29 @@ import React from 'react';
 
 const CallToAction = () => {
   return (
-    <div className="relative mx-auto w-full mt-20 mb-20">
-    <div
-      className="rounded-xl p-4 bg-blue-600"
-    >
-      <div className="rounded-lg bg-blue-500 backdrop-blur">
-        <div className="flex w-full flex-wrap
-        items-center justify-between gap-4 px-8 py-10 sm:px-16 lg:flex-nowrap">
-          <div className="lg:max-w-xl">
-            <h2 className="block w-full pb-2 text-white font-bold text-4xl sm:text-4xl">
-              Enhancing Productivity with Artificial Intelligence
-            </h2>
-            <p className="my-4 font-medium leading-relaxed tracking-wide
-             text-white">
-              Natural Language Processing (NLP): The SmartAI Assistant understands
-              and interprets natural language commands, allowing users to
-              communicate with it effortlessly.
-            </p>
-          </div>
-          <div>
-            <button className="bg-black
-             text-white button-text flex items-center justify-center
-              whitespace-nowrap rounded-md transition-all duration-300 px-8 py-3 text-lg
-               sm:text-sm">
-              Get Started
-            </button>
+    <div className="relative w-full mb-20">
+      <div className="p-12 bg-blue-800 flex justify-center">
+        <div className="w-full max-w-7xl">
+          <div className="flex flex-col lg:flex-row items-center
+           justify-center gap-16 px-8 py-10 sm:px-16">
+            <div className="lg:max-w-xl text-center lg:text-left">
+              <h2 className="w-full pb-2 text-white font-semibold text-6xl sm:text-6xl">
+              Enhance Your Interview Skills with AI Coaching
+              </h2>
+              <p className="my-4 font-medium leading-relaxed tracking-wide text-gray-400">
+                Sign up now for personalized AI coaching and ace your next job interview effortlessly.
+              </p>
+            </div>
+            <div>
+              <button className="bg-red-500 text-white
+               text-lg font-medium text-center rounded-lg shadow px-12 py-3 flex items-center justify-center">
+                Get Started
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
   );
 };
 
