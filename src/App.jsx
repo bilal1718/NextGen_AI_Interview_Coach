@@ -1,22 +1,19 @@
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
 import './App.css'
-import Home from './components/Home'
-import Navbar from './components/Navbar'
-import MyFooter from './components/Footer'
-import HowItWorks from './components/HowItWorks'
-import Features from './components/Features'
-import CallToAction from './components/CallToAction'
+import Landing_Page from './components/Landing_Page'
+import Login from './components/Login'
+import SignUp from './components/SignUp'
 
 function App() {
 
   return (
-    <>
-     <Navbar />
-     <Home />
-     <Features />
-     <CallToAction />
-     <HowItWorks />
-     <MyFooter />
-    </>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Landing_Page />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/register" element={<SignUp />} />
+     </Routes>
+    </BrowserRouter>
   )
 }
 
